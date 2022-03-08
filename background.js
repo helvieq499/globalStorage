@@ -15,7 +15,7 @@ window.addEventListener("message", event => {
     if (!Array.isArray(event.data) 
         || event.data.length != 2 
         || event.data[0] != "c62f7e27-4d05-402c-8ad2-8f47a0105614") return;
-    event.source.postMessage(getValue(event.data[1]), event.origin);
+    event.source.postMessage(getValue(event.data[1]), "*");
 });
 
 function getValue(section) {
