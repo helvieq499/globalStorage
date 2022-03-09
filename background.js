@@ -40,7 +40,7 @@ window.addEventListener("message", event => {
 window.addEventListener("message", event => {
     if (!Array.isArray(event.data) 
         || event.data.length != 2 
-        || event.data[0] != "c62f7e27-4d05-402c-8ad2-8f47a0105614") return;
+        || event.data[0] != "0d285481-615f-4262-a1c4-d61d0ea0b348") return;
     window.parent.postMessage(getValue(event.data[1])[event.data[2]], "*");
 });
 
