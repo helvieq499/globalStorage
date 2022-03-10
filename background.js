@@ -1,6 +1,6 @@
-cache = {};
+console.log("Loaded globalStorage");
 
-// note: these event handlers can be merge for perf
+cache = {};
 
 // section setter
 // [guid, section, values]
@@ -11,8 +11,6 @@ window.addEventListener("message", event => {
     cache[event.data[1]] = event.data[2];
     localStorage.setItem(event.data[1], JSON.stringify(event.data[2]));
 });
-
-cache = {};
 
 // section key setter
 // [guid, section, key, value]
